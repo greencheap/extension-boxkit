@@ -1,0 +1,23 @@
+{
+    "name": "greencheap/boxkit",
+    "type": "greencheap-extension",
+    "version": "1.0.0",
+    "title": "BoxKit",
+    "description": "It is a plugin that helps you own widgets. It offers you more like slideshow, slide, cards. ",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "GreenCheap",
+            "email": "support@greencheap.net",
+            "homepage": "https://greencheap.net"
+        }
+    ],
+    "extra": {
+        "image": "image.jpg",
+        "scripts": "scripts.php",
+        "icon": "icon.svg"
+    },
+    "archive": {
+        "exclude": ["node_modules", "!/app"]
+    }
+}
