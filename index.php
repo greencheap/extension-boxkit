@@ -1,4 +1,8 @@
 <?php
 return [
-    'name' => 'boxkit'
+    'name' => 'boxkit',
+
+    'widgets' => [
+        'widgets/slideshow.php'
+    ]
 ];

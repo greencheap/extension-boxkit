@@ -3,7 +3,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        
+        'widgets/slideshow':'./app/widgets/slideshow.vue'
     },
     output: {
         path: path.resolve(__dirname, './app/bundle'),
