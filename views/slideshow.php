@@ -1,10 +1,9 @@
 <div class="uk-position-relative uk-visible-toggle" tabindex="-1" uk-slideshow='<?= $widget->get('components') ?>'>
     <ul class="uk-slideshow-items">
         <?php foreach($widget->get('items') as $item): ?>
-            <?php $image = $item['media'] && $item['media']['src'] ? $item['media']['src'] : $view->url()->getStatic('boxkit:assets/greencheap.jpg') ?>
-            <?php $alt = $item['media'] && $item['media']['alt'] ? $item['media']['alt']:'' ?>
+            <?php $image = $item['media'] && $item['media'] ? $item['media'] : $view->url()->getStatic('boxkit:assets/greencheap.jpg') ?>
             <li>
-                <img src="<?= $image ?>" alt="<?= $alt ?>" uk-cover>
+                <img src="<?= $image ?>" uk-cover>
                 <div class="uk-position-center-<?= $item['align'] ?> uk-position-large uk-text-<?= $item['align'] ?> uk-light">
                     <h2 class="uk-margin-remove"><?= $item['title'] ?></h2>
                     <div class="uk-width-large">

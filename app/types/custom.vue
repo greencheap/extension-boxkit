@@ -75,7 +75,7 @@
                             <div v-if="item.media_type === 'image'" class="uk-margin">
                                 <label class="uk-form-label">{{ 'Image' | trans }}</label>
                                 <div class="uk-form-controls">
-                                    <input-image-meta v-model="item.media" :image.sync="item.media" class="pk-image-max-height" />
+                                    <input-image v-model="item.media" input-class="uk-form-width-large" />
                                 </div>
                             </div>
 
@@ -115,7 +115,7 @@ export default {
                 'title':'',
                 'content':'',
                 'media_type':'image',
-                'media':{},
+                'media':'',
                 'link':'',
                 'link_text':'',
                 'align':'left',

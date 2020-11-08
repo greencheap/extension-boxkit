@@ -23,7 +23,7 @@ foreach($query->get() as $key => $post){
         'link' => App::url('@blog/id', ['id' => $post->id ?: 0]),
         'link_text' => __('Read more'),
         'align' => 'left',
-        'media' => $post->get('image')
+        'media' => $post->get('image.src')
     ];
 }
 
