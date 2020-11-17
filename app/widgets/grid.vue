@@ -26,60 +26,124 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th>{{ 'Animation' | trans }}</th>
+                                    <th>{{ 'Masonry' | trans }}</th>
                                     <th>
-                                        <select class="uk-select uk-form-small" v-model="widget.data.components.animation">
-                                            <option value="slide">{{ 'Slide' | trans }}</option>
-                                            <option value="fade">{{ 'Fade' | trans }}</option>
-                                            <option value="scale">{{ 'Scale' | trans }}</option>
-                                            <option value="pull">{{ 'Pull' | trans }}</option>
-                                            <option value="push">{{ 'Push' | trans }}</option>
+                                        <input type="checkbox" v-model="widget.data.components.masonry" class="uk-checkbox">
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>{{ 'Parallax' | trans }}</th>
+                                    <th>
+                                        <input type="number" v-model="widget.data.components.parallax" class="uk-input uk-form-small">
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="uk-margin">
+                        <h5 class="uk-heading-line uk-text-bold"><span>{{ 'Classes' | trans }}</span></h5>
+                        <table class="uk-table">
+                            <thead>
+                                <tr>
+                                    <td style="min-width:150px">{{ 'Name' | trans }}</td>
+                                    <td class="uk-width-expand">{{ 'Value' | trans }}</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>{{ 'Gap Modifiers' | trans }}</th>
+                                    <th>
+                                        <select class="uk-select uk-form-small" v-model="widget.data.classes.gap">
+                                            <option value="">{{ 'Default' | trans }}</option>
+                                            <option value="uk-grid-small">{{ 'Small' | trans }}</option>
+                                            <option value="uk-grid-medium">{{ 'Medium' | trans }}</option>
+                                            <option value="uk-grid-large">{{ 'Large' | trans }}</option>
+                                            <option value="uk-grid-collapse">{{ 'Collapse' | trans }}</option>
                                         </select>
                                     </th>
                                 </tr>
                                 <tr>
-                                    <th>{{ 'Autoplay' | trans }}</th>
-                                    <th><input type="checkbox" class="uk-checkbox" v-model="widget.data.components.autoplay"></th>
+                                    <th>{{ 'Divider Modifiers' | trans }}</th>
+                                    <th>
+                                        <input type="checkbox" class="uk-checkbox" v-model="widget.data.classes.divider">
+                                    </th>
                                 </tr>
                                 <tr>
-                                    <th>{{ 'Autoplay Interval' | trans }}</th>
-                                    <th><input type="text" class="uk-input uk-form-small" v-model.number="widget.data.components['autoplay-interval']"></th>
+                                    <th>{{ 'Match Height' | trans }}</th>
+                                    <th>
+                                        <input type="checkbox" class="uk-checkbox" v-model="widget.data.classes.match">
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="uk-margin">
+                        <h5 class="uk-heading-line uk-text-bold"><span>{{ 'Width' | trans }}</span></h5>
+                        <table class="uk-table">
+                            <thead>
+                                <tr>
+                                    <td style="min-width:150px">{{ 'Device' | trans }}</td>
+                                    <td class="uk-width-expand">{{ 'Value' | trans }}</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>{{ 'Large Modifiers' | trans }}</th>
+                                    <th>
+                                        <select class="uk-select uk-form-small" v-model="widget.data.classes.device.large">
+                                            <option value="uk-child-width-1-1@xl">{{ '1' | trans }}</option>
+                                            <option value="uk-child-width-1-2@xl">{{ '2' | trans }}</option>
+                                            <option value="uk-child-width-1-3@xl">{{ '3' | trans }}</option>
+                                            <option value="uk-child-width-1-4@xl">{{ '4' | trans }}</option>
+                                            <option value="uk-child-width-1-5@xl">{{ '5' | trans }}</option>
+                                            <option value="uk-child-width-1-6@xl">{{ '6' | trans }}</option>
+                                            <option value="uk-child-width-1-7@xl">{{ '7' | trans }}</option>
+                                        </select>
+                                    </th>
                                 </tr>
                                 <tr>
-                                    <th>{{ 'Draggable' | trans }}</th>
-                                    <th><input type="checkbox" class="uk-checkbox" v-model="widget.data.components.draggable"></th>
+                                    <th>{{ 'Desktop Modifiers' | trans }}</th>
+                                    <th>
+                                        <select class="uk-select uk-form-small" v-model="widget.data.classes.device.desktop">
+                                            <option value="uk-child-width-1-1@l">{{ '1' | trans }}</option>
+                                            <option value="uk-child-width-1-2@l">{{ '2' | trans }}</option>
+                                            <option value="uk-child-width-1-3@l">{{ '3' | trans }}</option>
+                                            <option value="uk-child-width-1-4@l">{{ '4' | trans }}</option>
+                                            <option value="uk-child-width-1-5@l">{{ '5' | trans }}</option>
+                                            <option value="uk-child-width-1-6@l">{{ '6' | trans }}</option>
+                                            <option value="uk-child-width-1-7@l">{{ '7' | trans }}</option>
+                                        </select>
+                                    </th>
                                 </tr>
                                 <tr>
-                                    <th>{{ 'Easing' | trans }}</th>
-                                    <th><input type="text" class="uk-input uk-form-small" v-model="widget.data.components['easing']"></th>
+                                    <th>{{ 'Tablet Modifiers' | trans }}</th>
+                                    <th>
+                                        <select class="uk-select uk-form-small" v-model="widget.data.classes.device.tablet">
+                                            <option value="uk-child-width-1-1@m">{{ '1' | trans }}</option>
+                                            <option value="uk-child-width-1-2@m">{{ '2' | trans }}</option>
+                                            <option value="uk-child-width-1-3@m">{{ '3' | trans }}</option>
+                                            <option value="uk-child-width-1-4@m">{{ '4' | trans }}</option>
+                                            <option value="uk-child-width-1-5@m">{{ '5' | trans }}</option>
+                                            <option value="uk-child-width-1-6@m">{{ '6' | trans }}</option>
+                                            <option value="uk-child-width-1-7@m">{{ '7' | trans }}</option>
+                                        </select>
+                                    </th>
                                 </tr>
                                 <tr>
-                                    <th>{{ 'Infinite' | trans }}</th>
-                                    <th><input type="checkbox" class="uk-checkbox" v-model="widget.data.components.infinite"></th>
-                                </tr>
-                                <tr>
-                                    <th>{{ 'Pause On Hover' | trans }}</th>
-                                    <th><input type="checkbox" class="uk-checkbox" v-model="widget.data.components['pause-on-hover']"></th>
-                                </tr>
-                                <tr>
-                                    <th>{{ 'Index' | trans }}</th>
-                                    <th><input type="number" class="uk-input uk-form-small" v-model.number="widget.data.components.index"></th>
-                                </tr>
-                                <tr>
-                                    <th>{{ 'Velocity' | trans }}</th>
-                                    <th><input type="number" class="uk-input uk-form-small" v-model.number="widget.data.components.velocity"></th>
-                                </tr>
-                                <tr>
-                                    <th>{{ 'Ratio' | trans }}</th>
-                                    <th><input type="text" class="uk-input uk-form-small" v-model="widget.data.components['ratio']"></th>
-                                </tr>
-                                <tr>
-                                    <th>{{ 'Min Height' | trans }}</th>
-                                    <th><input type="text" class="uk-input uk-form-small" v-model.number="widget.data.components['min-height']"></th>
-                                </tr>
-                                <tr>
-                                    <th>{{ 'Max Height' | trans }}</th>
-                                    <th><input type="text" class="uk-input uk-form-small" v-model.number="widget.data.components['max-height']"></th>
+                                    <th>{{ 'Phone Modifiers' | trans }}</th>
+                                    <th>
+                                        <select class="uk-select uk-form-small" v-model="widget.data.classes.device.phone">
+                                            <option value="uk-child-width-1-1@s">{{ '1' | trans }}</option>
+                                            <option value="uk-child-width-1-2@s">{{ '2' | trans }}</option>
+                                            <option value="uk-child-width-1-3@s">{{ '3' | trans }}</option>
+                                            <option value="uk-child-width-1-4@s">{{ '4' | trans }}</option>
+                                            <option value="uk-child-width-1-5@s">{{ '5' | trans }}</option>
+                                            <option value="uk-child-width-1-6@s">{{ '6' | trans }}</option>
+                                            <option value="uk-child-width-1-7@s">{{ '7' | trans }}</option>
+                                        </select>
+                                    </th>
                                 </tr>
                             </tbody>
                         </table>
@@ -128,18 +192,19 @@
             if(!this.widget.data.components){
                 this.widget.data = _.merge({
                     components:{
-                        'animation':'slide',
-                        'autoplay':true,
-                        'autoplay-interval':7000,
-                        'draggable':true,
-                        'easing':'ease',
-                        'finite':false,
-                        'pause-on-hover':true,
-                        'index':0,
-                        'velocity':1,
-                        'ratio':'16:9',
-                        'min-height':'',
-                        'max-height':''
+                        'masonry':false,
+                        'parallax':0,
+                    },
+                    classes:{
+                        'gap':'',
+                        'divider': false,
+                        'match': false,
+                        'device':{
+                            'large':'uk-child-width-1-4@xl',
+                            'desktop':'uk-child-width-1-3@l',
+                            'tablet':'uk-child-width-1-2@m',
+                            'phone':'uk-child-width-1-1@s',
+                        }
                     }
                 } , this.widget.data)
             }
@@ -152,7 +217,7 @@
     }
 
     import BlogWidget from '../types/blog.vue'
-    import CustomWidget from '../types/custom.vue'
+    import CustomWidget from '../types/custom-grid.vue'
 
     import componentSettings from '../lib/componentSettings'
     export default grid;

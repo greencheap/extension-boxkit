@@ -16,6 +16,7 @@ return [
         if($widget->get('widget_type') !== 'CustomWidget'){
             $widget->set('items' , ThemeHelper::requireData($widget->get('render.render') , (object) $widget->get('type_options') , $widget->get('markdown')));
         }
+        $widget->set('classes' , ThemeHelper::gridData($widget->get('classes')));
         return $app->view('boxkit/grid.php' , compact('widget'));
     }
 ];

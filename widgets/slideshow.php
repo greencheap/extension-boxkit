@@ -1,7 +1,7 @@
 <?php
 use GreenCheap\Application as App;
 
-use GreenCheap\BotKit\Helper\ThemeHelper;
+use GreenCheap\BoxKit\Helper\ThemeHelper;
 
 return [
     'name' => 'boxkit/slideshow',

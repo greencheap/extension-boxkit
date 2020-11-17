@@ -22,6 +22,29 @@
                         </div>
                         <div v-show="item.show" class="uk-card-body uk-card-small">
                             <div class="uk-margin">
+                                <label class="uk-form-label">{{ 'Card Style' | trans }}</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" v-model="item.card">
+                                        <option value="uk-card uk-card-default">{{ 'Default' | trans }}</option>
+                                        <option value="uk-card uk-card-primary">{{ 'Primary' | trans }}</option>
+                                        <option value="uk-card uk-card-secondary">{{ 'Secondary' | trans }}</option>
+                                        <option value="uk-card uk-card-muted">{{ 'Muted' | trans }}</option>
+                                        <option value="uk-card">{{ 'Blank' | trans }}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="uk-margin">
+                                <label class="uk-form-label">{{ 'Card Size' | trans }}</label>
+                                <div class="uk-form-controls">
+                                    <select class="uk-select" v-model="item.card_size">
+                                        <option value="uk-card-body">{{ 'Default' | trans }}</option>
+                                        <option value="uk-card-body uk-card-small">{{ 'Small' | trans }}</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="uk-margin">
                                 <label class="uk-form-label">{{ 'Title' | trans }}</label>
                                 <div class="uk-form-controls">
                                     <input type="text" class="uk-input" v-model="item.title">
@@ -112,6 +135,8 @@ export default {
     methods: {
         addItems(){
             this.widget.data.items.push({
+                'card':'uk-card uk-card-default',
+                'card_size':'uk-card-body',
                 'title':'',
                 'content':'',
                 'media_type':'image',
